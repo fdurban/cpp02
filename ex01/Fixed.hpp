@@ -5,23 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 12:29:41 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/11/17 14:02:44 by fdurban-         ###   ########.fr       */
+/*   Created: 2025/11/17 15:57:24 by fdurban-          #+#    #+#             */
+/*   Updated: 2025/11/17 18:06:36 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <iostream>
 
 class Fixed
 {
 	private:
-		int			fpnvalue;
-		static const int	FractionalBits;
+		const int	fpvalue;
+		int		fractionalBits;
 	public:
-		Fixed();
-		Fixed(const Fixed& other);
-		Fixed& operator=(const Fixed& other);
-		~Fixed();
-		int	getRawBits(void) const;
-		void	setRawBits(int const raw);
+		Fixed(const int floatingPointInt);
+		Fixed(const float floatingPointFloat);
+		float	toFloat(void) const;
+		int	toInt(void) const;
 };
