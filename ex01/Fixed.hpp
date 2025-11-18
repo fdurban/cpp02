@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fdurban- <fdurban-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:57:24 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/11/17 18:06:36 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:29:37 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 class Fixed
 {
 	private:
@@ -20,4 +21,5 @@ class Fixed
 		Fixed(const float floatingPointFloat);
 		float	toFloat(void) const;
 		int	toInt(void) const;
+		std::ostream	&operator<<(std::ostream &o, Fixed const &fixed)
 };
