@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 class Fixed
 {
 	private:
@@ -20,21 +21,21 @@ class Fixed
 		Fixed(const int floatingPointInt);
 		Fixed(const float floatinfPointFloat);
 		Fixed(const Fixed& other);
-		Fixed&	operator=(const Fixed& other);
-		bool	&operator>();
-		bool	&operator<();
-		bool	&operator>=();
-		bool	&operator<=();
-		bool	&operator==();
-		bool	&operator!=();
-		int	&operator+();
-		int	&operator-();
-		int	&operator*();
-		int	&operator/();
-		Fixed	operator++();
-		Fixed	operator--();
-		Fixed	operator++();
-		Fixed	operator--();
+		Fixed	operator=(const Fixed& other);
+		bool	operator>(const Fixed  &other);
+		bool	operator<(const Fixed  &other);
+		bool	operator>=(const Fixed  &other);
+		bool	operator<=(const Fixed  &other);
+		bool	operator==(const Fixed  &other);
+		bool	operator!=(const Fixed  &other);
+		int	operator+(const Fixed  &other);
+		int	operator-(const Fixed  &other);
+		int	operator*(const Fixed  &other);
+		int	operator/(const Fixed  &other);
+		Fixed	operator++(const Fixed  &other);
+		Fixed	operator--(const Fixed  &other);
+		Fixed	operator++(const Fixed  &other);
+		Fixed	operator--(const Fixed  &other);
 		static void min(int &fpvalue,int &fpvalue2);
 		static void min(const int &fpvalue4);
 };

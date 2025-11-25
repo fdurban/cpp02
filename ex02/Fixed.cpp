@@ -37,7 +37,12 @@ Fixed::Fixed(const Fixed& other)
 	*this = other;
 }
 
-Fixed&	Fixed::operator=(const Fixed& other)
+int	Fixed::getRawBits(void) const
+{
+	return (this->fpvalue)
+}
+
+Fixed	Fixed::operator=(const Fixed& other)
 {
 	std::cout<<"Copy assignment operator called"<<std::endl;
 	if(this == &other)
@@ -46,58 +51,58 @@ Fixed&	Fixed::operator=(const Fixed& other)
 	return *this;
 }
 
-std::ostream &operator<<(std::ostream &o, Fixed const &fixed)
+std::ostream operator<<(std::ostream &o, Fixed const &fixed)
 {
 	o << fixed.toFloat();
 	return (o);
 }
 
-bool	Fixed::&operator>(const Fixed  &other)
+bool	Fixed::operator>(const Fixed  &other)
 {
 	return(this.getRawBits() > other.getRawBits());
 }
 
-bool	Fixed::&operator<(const Fixed  &other)
+bool	Fixed::operator<(const Fixed  &other)
 {
 	return(this.getRawBits() < other.getRawBits());
 }
 
 
-bool	Fixed::&operator>=(const Fixed  &other)
+bool	Fixed::operator>=(const Fixed  &other)
 {
 	return(this.getRawBits() >= other.getRawBits());
 }
 
-bool	Fixed::&operator<=(const Fixed  &other)
+bool	Fixed::operator<=(const Fixed  &other)
 {
 	return(this.getRawBits() <= other.getRawBits());
 }
 
-bool	Fixed::&operator==(const Fixed  &other)
+bool	Fixed::operator==(const Fixed  &other)
 {
 	return(this.getRawBits() == other.getRawBits());
 }
 
-bool	Fixed::&operator!=(const Fixed  &other)
+bool	Fixed::operator!=(const Fixed  &other)
 {
 	return(this.getRawBits() != other.getRawBits());
 }
 
 //OVERLOAD ARITHMETIC OPERATIONS
 
-int Fixed::&&operator+(const Fixed &other)
+int Fixed::operator+(const Fixed &other)
 {
 	return(this.getRawBits() + other.getRawBits());
 }
-int	Fixed::&&operator-(const Fixed &other)
+int	Fixed::operator-(const Fixed &other)
 {
 	return(this.getRawBits() - other.getRawBits());
 }
-int	Fixed::&&operator*(const Fixed &other)
+int	Fixed::operator*(const Fixed &other)
 {
 	return(this.getRawBits() * other.getRawBits());
 }
-int	Fixed::&&operator/(const Fixed &other)
+int	Fixed::operator/(const Fixed &other)
 {
 	return(this.getRawBits() / other.getRawBits());
 }
