@@ -6,16 +6,17 @@
 /*   By: fdurban- <fdurban-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:57:24 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/11/19 13:59:47 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:21:19 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
 	private:
-		int	fpvalue;
+		int	fixedPointNumberValue;
 		static const int	fractionalBits;
 	public:
 		Fixed();

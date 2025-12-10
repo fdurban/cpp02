@@ -6,7 +6,7 @@
 /*   By: fdurban- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 12:29:41 by fdurban-          #+#    #+#             */
-/*   Updated: 2025/11/17 14:02:44 by fdurban-         ###   ########.fr       */
+/*   Updated: 2025/12/10 14:55:11 by fdurban-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 class Fixed
 {
 	private:
-		int			fpnvalue;
-		static const int	FractionalBits;
+		int			fixedPointNumberValue;
+		static const int	fractionalBits;
 	public:
 		Fixed();
 		Fixed(const Fixed& other);
